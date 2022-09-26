@@ -1,0 +1,44 @@
+<div class= "container custom-container2">
+  <div class= "col-md-12">
+    <h2 class="paraghp">{{ titleComp }}</h2>
+    <div *ngIf= "listTasks != 0; else listaSemDados">
+
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <!-- <th class= "thtable">Id Task</th> -->
+            <th class= "thtable">Author</th>
+            <th class= "thtable">Title</th>
+            <th class= "thtable">Description</th>
+            <th class= "thtable">Status</th>
+            <th class= "thtable">Created AT</th>
+            <th class= "thtable">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let datas of listTasks">
+            <!-- <td>{{ datas.id }}</td> -->
+            <td class="datas">{{ datas.author }}</td>
+            <td class="datas">{{ datas.title }}</td>
+            <td class="datas">{{ datas.description }}</td>
+            <td class="datas">{{ datas.status }}</td>
+            <td class="datas">{{ datas.created_at }}</td>
+            <td>
+              <button class= "btn btn-outline-primary" routerLink= "/tasks-edit/{{ datas.id }}">Edit</button>
+              <button class= "btn btn-outline-primary" (click)= "deleteTasks(datas.id)">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+    <ng-template #listaSemDados>
+      <div class= "no-data text-center">
+        <p>There's still no record... Create!... click the button below.</p>
+        <button class= "btn btn-outline-primary" routerLink= "/tasks-create">Create Task</button>
+      </div>
+    </ng-template>
+</div>
+
