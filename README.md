@@ -14,8 +14,12 @@
 
 - Primeiro passo
 
-- Para acessar o `mock-server`, com o `nodejs` e o `json-server` instalados abra o terminal, entre na pasta `server`, então digite o seguinte comando no terminal `json-server db.json`, pronto assim o servidor `mock-server`, estará de pé e disponível.
+- Execute o comando `npm Install`, para baixar as dependências do projeto.
 
 - Segundo Passo
+
+- Para acessar o `mock-server`, com o `nodejs` e o `json-server` instalados abra o terminal, entre na pasta `server`, então digite o seguinte comando no terminal `json-server db.json`, pronto assim o servidor `mock-server`, estará de pé e disponível.
+
+- Terceiro Passo
 
 - Na pasta raiz do projeto abra o terminal e execute o seguinte comando `ng serve --open`, esse comando vai compilar e abrir o projeto, em seguida vá para o passo 2.
